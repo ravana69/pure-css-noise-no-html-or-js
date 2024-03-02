@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation:
+    line 1ms infinite alternate linear,
+    squeeze 1.1ms infinite alternate linear,
+    jump 1.2ms infinite alternate linear,
+    fonts 1.3ms infinite alternate linear,
+    deco 1.4ms infinite alternate linear,
+    size 1ms infinite alternate linear
+    ;
+}
+
+html {
+  height: 100vmin;
+  width: 100vmin;
+  left: calc(50% - 50vmin) !important;
+  top: calc(50% - 50vmin) !important;
+}
+
+@keyframes size {
+  from { font-size: 1.4em }
+  to   { font-size: 1.2em; }
+}
+
+@keyframes deco {
+  0%  { text-decoration: line-through; }
+  33% { text-decoration: underline; }
+  66% { text-decoration: overline; }
+}
+
+@keyframes fonts {
+  0%  { font-family: cursive; }
+  25% { font-family: fantasy; } 
+  50% { font-family: monospace; }
+  75% { font-family: sans-serif; }
+}
+
+@keyframes jump {
+  from { text-transform: uppercase; }
+  to   { text-transform: lowercase; } 
+}
+
+@keyframes squeeze {
+  from { letter-spacing: -4px; }
+  to   { letter-spacing: -10px; }
+}
+
+@keyframes line {
+  from { line-height: 0.4; }
+  to   { line-height: 0.5; }
+}
